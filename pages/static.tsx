@@ -1,4 +1,4 @@
-import { GetServerSideProps,GetStaticProps, NextPage } from "next";
+import { GetServerSideProps, GetStaticProps, NextPage } from "next";
 import { ReactNode, useEffect, useState } from "react";
 import { Col, Container, Row } from "reactstrap";
 
@@ -12,7 +12,7 @@ export const getStaticProps: GetStaticProps = async () => {
     const staticData = await fetch(`${process.env.NEXT_PUBLIC_APIURL}/api/hello`).then(res => res.json())
 
     return {
-        props:{
+        props: {
             staticData
         }
     }
